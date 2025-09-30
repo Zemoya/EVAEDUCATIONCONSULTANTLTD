@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>EVA EDUCATION CONSISTENCY LTD.</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #2E2E2E;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #4ea8de;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #ffb703;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 5px;
+    }
+
+    /* Hide menu on small devices */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        width: 200px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Main Title */
+    .main-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bolder;
+      margin: 20px 0;
+    }
+
+    /* Container for services */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Individual card */
+    .card {
+      background-color: #222831;
+      border-radius: 20px;
+      padding: 15px;
+      width: 300px;
+      color: beige;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.9);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+    }
+    a {
+      text-decoration: none;
+    }
+    .card h2 {
+      color: #69c;
+      font-family: sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      background-color: #111; /* fallback */
+    }
+
+    .price {
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 1.2rem;
+      color: #ffb703;
+      margin: 5px 0;
+    }
+
+    .price span {
+      color: yellow;
+    }
+
+    .price span:hover {
+      cursor: pointer;
+    }
+
+    button {
+      background-color: black;
+      width: 100%;
+      padding: 12px;
+      color: white;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bolder;
+      font-family: cursive;
+      border: 2px solid #444;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: #ffb703;
+      color: black;
+    }
+
+    button:active {
+      background-color: #023e8a;
+      color: white;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 1.5rem;
+      }
+      .card {
+        width: 90%;
+      }
+       .card h2 {
+        font-family: sans-serif;
+      }
+      .card h3 {
+        font-family: sans-serif;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 1.2rem;
+      }
+      a {
+        text-decoration: none;
+      }
+      .card h2 {
+        font-family: sans-serif;
+      }
+      .card h3 {
+        font-family: sans-serif;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+<h2 style="color:white;">EVA EDUCATION</h2>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Title -->
+  <h1 class="main-title">EVA EDUCATION CONSISTENCY LTD. SERVICES</h1>
+
+  <!-- Services -->
+  <div class="container" id="services">
+    <!-- JAMB Services -->
+    <div class="card"><h2>JAMB SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: JAMB ORIGINAL RESULT</h3><p class="price">PRICE: <span>₦3500</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+JAMB+original+result+it's+₦3500+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>JAMB SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: JAMB ORIGINAL LETTER</h3><p class="price">PRICE: <span>₦3500</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+JAMB+original+Letter+it's+₦3500+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>JAMB SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: PUNCHING E-PIN (JAMB & DE)</h3><p class="price">PRICE: <span>₦7500</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+Punching E-PIN for JAMB & DE+original+result+it's+₦7500+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>JAMB SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: JAMB LOGIN ISSUES</h3><p class="price">PRICE: <span>₦5000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+fix+JAMB+login+issues+it's+₦5000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>JAMB SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: ATTESTATION LETTER</h3><p class="price">PRICE: <span>₦3000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+ATTESTATION+LETTER+it's+₦3000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>JAMB SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: LETTER OF GOOD CONDUCT</h3><p class="price">PRICE: <span>₦3000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+LETTER+OF+GOOD+CONDUCT+it's+₦3000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>JAMB SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: REFERENCE LETTER</h3><p class="price">PRICE: <span>₦13000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+REFERENCE+LETTER+it's+₦13000+on+the+website">PURCHASE</a></button></div>
+
+    <!-- Certificate Services -->
+    <div class="card"><h2>CERTIFICATE SERVICE</h2><img src="EVA SITE PICS/pictures/WAEC CERTIFICATE.jpg"><h3>SERVICE: WAEC CERTIFICATE</h3><p class="price">PRICE: <span>₦15000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+WAEC+CERTIFICATE+it's+₦15000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>CERTIFICATE SERVICE</h2><img src="EVA SITE PICS/pictures/NECO E VERIFY CERT.jpg"><h3>SERVICE: NECO E VERIFY CERTIFICATE</h3><p class="price">PRICE: <span>₦13000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+NECO+E-VERIFY+CERTIFICATE+it's+₦13000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>CERTIFICATE SERVICE</h2><img src="EVA SITE PICS/pictures/NAPTEB.jpg"><h3>SERVICE: NAPTEB CERTIFICATE</h3><p class="price">PRICE: <span>₦15000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+NAPTEB+CERTIFICATE+it's+₦15000+on+the+website">PURCHASE</a></button></div>
+   <div class="card"><h2>CERTIFICATE SERVICE</h2><img src="EVA SITE PICS/pictures/Coat Of Arm.jpg"><h3>SERVICE: BIRTH CERTIFICATE</h3><p class="price">PRICE: <span>₦13000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+BIRTH+CERTIFICATE+it's+₦13000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>CERTIFICATE SERVICE</h2><img src="EVA SITE PICS/pictures/state of origin.jpg"><h3>SERVICE: STATE OF ORIGIN & LOCAL GOVERNMENT CERT.</h3><p class="price">PRICE: <span>₦13000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+STATE+OF+ORIGIN+OR+LOCAL+GOVERNMENT+CERTIFICATE+it's+₦13000+on+the+website">PURCHASE</a></button></div>
+
+    <!-- Court Services -->
+    <div class="card"><h2>COURT SERVICE</h2><img src="EVA SITE PICS/pictures/affidavit.jpg"><h3>SERVICE: AFFIDAVIT OF CORRECTION OF NAME</h3><p class="price">PRICE: <span>₦5000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+AFFIDAVIT+OF+CORRECTION+OF+NAME+it's+₦5000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>COURT SERVICE</h2><img src="EVA SITE PICS/pictures/affidavit.jpg"><h3>SERVICE: AFFIDAVIT OF CORRECTION OF STATE</h3><p class="price">PRICE: <span>₦5000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+AFFIDAVIT+OF+CORRECTION+OF+STATE+it's+₦5000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>COURT SERVICE</h2><img src="EVA SITE PICS/pictures/affidavit.jpg"><h3>SERVICE: AFFIDAVIT OF CORRECTION OF DATE OF BIRTH</h3><p class="price">PRICE: <span>₦5000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+AFFIDAVIT+OF+CORRECTION+OF+DATE+OF+BIRTH+it's+₦5000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>COURT SERVICE</h2><img src="EVA SITE PICS/pictures/affidavit.jpg"><h3>SERVICE: AFFIDAVIT OF GOOD CONDUCT</h3><p class="price">PRICE: <span>₦5000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+AFFIDAVIT+OF+CORRECTION+OF+GOOD+CONDUCT+it's+₦5000+on+the+website">PURCHASE</a></button></div>
+
+    <!-- O'Level Services -->
+    <div class="card"><h2>O'LEVEL SERVICE</h2><img src="EVA SITE PICS/pictures/WAEC.jpg"><h3>SERVICE: WAEC SCRATCH CARD</h3><p class="price">PRICE: <span>₦5000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+WAEC+SCRATCH+CARD+it's+₦5000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>O'LEVEL SERVICE</h2><img src="EVA SITE PICS/pictures/NECO.jpg"><h3>SERVICE: NECO SCRATCH CARD</h3><p class="price">PRICE: <span>₦5000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+NECO+SCRATCH+CARD+it's+₦5000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>O'LEVEL SERVICE</h2><img src="EVA SITE PICS/pictures/NAPTEB.jpg"><h3>SERVICE: NAPTEB SCRATCH CARD</h3><p class="price">PRICE: <span>₦4000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+NAPTEB+SCRATCH+CARD+it's+₦4000+on+the+website">PURCHASE</a></button></div>
+
+  <!-- PAST QUESTIONS Services -->
+    <div class="card"><h2>PAST QUESTION SERVICE</h2><img src="EVA SITE PICS/pictures/Coat Of Arm.jpg"><h3>SERVICE: ALL SCHOOL POST UTME PAST QUESTI0NS</h3><p class="price">PRICE: <span>₦3500</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+ALL+SCHOOL+POST+UTME+PAST+QUESTION+it's+₦3500+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>PAST QUESTION SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: JAMB PAST QUESTIONS</h3><p class="price">PRICE: <span>₦3000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+JAMB+PAST+QUESTI0NS+it's+₦3000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>PAST QUESTION SERVICE</h2><img src="EVA SITE PICS/pictures/WAEC.jpg"><h3>SERVICE: WAEC PAST QUESTIONS</h3><p class="price">PRICE: <span>₦2000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+WAEC+PAST+QUESTI0NS+it's+₦2000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>PAST QUESTION SERVICE</h2><img src="EVA SITE PICS/pictures/NECO.jpg"><h3>SERVICE: NECO PAST QUESTIONS</h3><p class="price">PRICE: <span>₦2000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+NECO+PAST+QUESTI0NS+it's+₦2000+on+the+website">PURCHASE</a></button></div>
+  
+     <!-- NIN Services -->
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: RETRIEVING NIN</h3><p class="price">PRICE: <span>₦3000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+RETRIEVING+NIN+it's+₦3000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: PLASTIC NIN</h3><p class="price">PRICE: <span>₦3500</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+PLASTIC+NIN+it's+₦3500+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: CORRECTION OF NAME</h3><p class="price">PRICE: <span>₦15000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CORRECTION+OF+NIN+NAME+it's+₦15000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: CORRECTION  OF DATE OF BIRTH</h3><p class="price">PRICE: <span>₦50000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CORRECTION+OF+NIN+DATE+OF+BIRTH+it's+₦50000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: CORRECTION OF STATE OF ORIGIN</h3><p class="price">PRICE:<span>₦15000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CORRECTION+OF+NIN+STATE+Of+ORIGIN+it's+₦15000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: CORRECTION OF LOCAL GOVERNMENT</h3><p class="price">PRICE: <span>₦15000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CORRECTION+OF+NIN+LOCAL+GOVERNMENT+it's+₦15000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: CORRECTION OF ADDRESS</h3><p class="price">PRICE: <span>₦15000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CORRECTION+OF+NIN+ADDRESS+it's+₦15000+on+the+website">PURCHASE</a></button></div>
+    <div class="card"><h2>NIN SERVICE</h2><img src="EVA SITE PICS/pictures/NIMC.jpg"><h3>SERVICE: CORRECTION OF PHONE NUMBER</h3><p class="price">PRICE: <span>₦15000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CORRECTION+OF+NIN+PHONE+NUMBER+it's+₦15000+on+the+website">PURCHASE</a></button></div>
+    
+    <!-- PAST QUESTIONS Services -->
+    <div class="card"><h2>ONLINE PAYMENT SERVICE</h2><img src="EVA SITE PICS/pictures/Coat Of Arm.jpg"><h3>SERVICE: ALL SCHOOL POST UTME FORM</h3><p class="price">PRICE: <span>UNFIXED PRICE</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+SCHOOL+POST+UTME+FORM,+HOW+MUCH+IS+IT?">PURCHASE</a></button></div>
+    <div class="card"><h2>ONLINE PAYMENT SERVICE</h2><img src="EVA SITE PICS/pictures/JAMB.jpg"><h3>SERVICE: ALL SCHOOL FEES PAYMENT</h3><p class="price">PRICE: <span>UNFIXED PRICE</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase++SCHOOL+FEES+PAYMENT,+HOW+MUCH+IS+IT?">PURCHASE</a></button></div>
+    <div class="card"><h2>ONLINE PAYMENT SERVICE</h2><img src="EVA SITE PICS/pictures/WAEC.jpg"><h3>SERVICE: ALL SCHOOL MEDICAL PAYMENT</h3><p class="price">PRICE: <span>UNFIXED PRICE</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+SCHOOL+MEDICAL+PAYMENT,+HOW+MUCH+IS+IT?">PURCHASE</a></button></div>
+    <div class="card"><h2>ONLINE PAYMENT SERVICE</h2><img src="EVA SITE PICS/pictures/NECO.jpg"><h3>SERVICE: CLEARANCE PAYMENT</h3><p class="price">PRICE: <span>UNFIXED PRICE</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+PAYMENT+OF+CLEARANCE,+HOW+MUCH+IS+IT?">PURCHASE</a></button></div>
+
+    <!-- CAC Services -->
+    <div class="card"><h2>CAC SERVICE</h2><img src="EVA SITE PICS/pictures/CAC registration.jpg"><h3>SERVICE: COMPANY REGISTRATION</h3><p class="price">PRICE: <span>₦50000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CAC+COMPANY+REGISTRATION,IT'S+₦50000+ON+THE+WEBSITE">PURCHASE</a></button></div>
+    <div class="card"><h2>CAC SERVICE</h2><img src="EVA SITE PICS/pictures/CAC registration.jpg"><h3>SERVICE: ENTERPRISE REGISTRATION</h3><p class="price">PRICE: <span>₦35000</span></p><button>
+      <a href="https://wa.me/+2348131108836?text=I+want+to+purchase+CAC+ENTERPRISE+REGISTRATION,IT'S+₦35000+ON+THE+WEBSITE">PURCHASE</a></button></div>
+  <!-- Social Handles -->
+  <div id="social" style="text-align:center; padding:20px;">
+    <br> <h2>Follow Us</h2>
+    <p> <a href="https://www.instagram.com/EDU_EVATV/">Instagram</a> <i class="fab fa-instagram"></i> | 
+    <a href="https://wa.me/2348131108836">Whatsapp</a> <i class="fab fa-whatsapp"></i> | 
+  <a href="https://x.com/EDU_EVATV">X</a> <i class="fab fa-twitter"></i></p>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
