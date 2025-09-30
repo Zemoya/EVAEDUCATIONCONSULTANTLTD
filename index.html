@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVA Educational Consultant - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Reset and Base */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: Arial, sans-serif; line-height: 1.6; color: #333;}
+
+    /* Navbar */
+    header {
+      background: #003366;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {font-size: 1.5em;}
+    nav ul {list-style: none; display: flex; gap: 20px;}
+    nav a {color: white; text-decoration: none; font-weight: bold;}
+    .hamburger {display: none; font-size: 1.5em; cursor: pointer;}
+
+    /* Hero Section */
+    .hero {
+      background: url("EVA SITE PICS/pictures/NEWDP.jpg") no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    .hero h2 {font-size: 2.5em; margin-bottom: 15px;}
+    .hero p {font-size: 1.2em; margin-bottom: 20px;}
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ffcc00;
+      color: #003366;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {background: #e6b800;}
+
+    /* Intro Section */
+    .intro {
+      padding: 60px 10%;
+      text-align: center;
+    }
+    .intro h2 {color: #003366; margin-bottom: 15px;}
+    .intro p {font-size: 1.1em; max-width: 800px; margin: auto;}
+
+    /* Services Section */
+    .services {
+      background: #f4f4f4;
+      padding: 60px 10%;
+      text-align: center;
+    }
+    .services h2 {color: #003366; margin-bottom: 40px;}
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {transform: translateY(-5px);}
+    .card i {
+      font-size: 2em;
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    /* Why Choose Us */
+    .why {
+      padding: 60px 10%;
+      text-align: center;
+    }
+    .why h2 {color: #003366; margin-bottom: 40px;}
+    .why-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .why-item {
+      flex: 1 1 250px;
+      padding: 20px;
+    }
+    .why-item i {
+      font-size: 2em;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav ul {display: none; flex-direction: column; background: #003366; position: absolute; top: 60px; right: 10%; padding: 20px;}
+      nav ul.show {display: flex;}
+      .hamburger {display: block;}
+      .hero h2 {font-size: 2em;}
+      .hero p {font-size: 1em;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>EVA EDUCATION</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+      <span class="hamburger"><i class="fas fa-bars"></i></span>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Guiding Students Towards Success</h2>
+      <p>Your trusted partner in education, registration, and consultancy services.</p>
+      <a href="services.html" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro">
+    <h2>Welcome to EVA Educational Consultant</h2>
+    <p>We are dedicated to supporting students in their educational journeys, offering reliable consultancy and registration services while protecting them from online scams. Our goal is to make education stress-free and accessible for all.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <i class="fas fa-file-alt"></i>
+        <h3>JAMB & Post-UTME</h3>
+        <p>Printing of JAMB results, admission letters, and Post-UTME registration for all institutions.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-certificate"></i>
+        <h3>Certificates</h3>
+        <p>WAEC, NECO, NABTEB scratch cards, Birth certificates, and State of Origin certificates.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-briefcase"></i>
+        <h3>CAC & Affidavits</h3>
+        <p>Business registrations, affidavits, and essential educational documents.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-ellipsis-h"></i>
+        <h3>...and Much More</h3>
+        <p>From BVN generation to nursing school forms — we’ve got you covered.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why">
+    <h2>Why Choose EVA?</h2>
+    <div class="why-icons">
+      <div class="why-item"><i class="fas fa-check-circle"></i><h3>Trusted & Reliable</h3><p>Over 1 year of excellence in helping students succeed.</p></div>
+      <div class="why-item"><i class="fas fa-users"></i><h3>Experienced Team</h3><p>Friendly and professional consultants always ready to assist.</p></div>
+      <div class="why-item"><i class="fas fa-wallet"></i><h3>Affordable Services</h3><p>We provide quality support at student-friendly prices.</p></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EVA Educational Consultant. All Rights Reserved.</p>
+    <p>Follow us: 
+      <a href="https://instagram.com/EDU_EVATV" style="color:#ffcc00;">Instagram</a> | 
+      <a href="https://twitter.com/EDU_EVATV" style="color:#ffcc00;">Twitter</a>
+    </p>
+  </footer>
+
+  <script>
+    // Toggle mobile nav
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
